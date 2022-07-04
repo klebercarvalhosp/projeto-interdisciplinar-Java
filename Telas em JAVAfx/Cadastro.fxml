@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.comandavirtual.Cadastro">
+   <children>
+      <AnchorPane style="-fx-background-color: black;">
+         <children>
+            <ImageView fitHeight="550.0" fitWidth="641.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../newpackageImagens/delight2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="345.0" prefHeight="550.0" prefWidth="357.0" style="-fx-background-color: #3c0b01;">
+         <children>
+            <Label layoutX="71.0" layoutY="287.0" text="CPF" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="104.0" layoutY="181.0" prefHeight="52.0" prefWidth="172.0" text="Cadastrar" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="34.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="329.0" text="Senha" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="373.0" text="Telefone" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_CpfCadastro" layoutX="104.0" layoutY="287.0" prefHeight="25.0" prefWidth="196.0" />
+            <TextField fx:id="txt_SenhaCadastro" layoutX="104.0" layoutY="326.0" prefHeight="25.0" prefWidth="196.0" />
+            <TextField fx:id="txt_TelefoneCadastro" layoutX="104.0" layoutY="370.0" prefHeight="25.0" prefWidth="196.0" />
+            <Button layoutX="104.0" layoutY="438.0" mnemonicParsing="false" onAction="#Cadastrar" prefHeight="29.0" prefWidth="196.0" style="-fx-background-color: b89b5f;" text="Cadastrar" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="180.0" fitWidth="344.0" layoutX="-4.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="17.0">
+               <image>
+                  <Image url="@../../../newpackageImagens/logo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="28.0" layoutY="479.0" mnemonicParsing="false" onAction="#inicio" prefHeight="38.0" prefWidth="26.0" style="-fx-background-color: #3c0b01;" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../newpackageImagens/arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <RadioButton fx:id="rbUsuario" layoutX="110.0" layoutY="404.0" mnemonicParsing="false" text="Usuario" textFill="#f8f3f3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tipo_cadastro" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbGerente" layoutX="207.0" layoutY="404.0" mnemonicParsing="false" onAction="#validaGerente" text="Gerente" textFill="#f2eded" toggleGroup="$tipo_cadastro" />
+            <Label layoutX="57.0" layoutY="253.0" text="Nome" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_NomeCadastro" layoutX="105.0" layoutY="250.0" prefHeight="25.0" prefWidth="196.0" />
+            <TextField fx:id="txt_ValidaGerente" layoutX="226.0" layoutY="492.0" prefHeight="29.0" prefWidth="101.0" promptText="Codigo Gerente" visible="false" />
+            <Button fx:id="btnValidaGerente" layoutX="155.0" layoutY="492.0" mnemonicParsing="false" onAction="#validaCodigo" prefHeight="29.0" prefWidth="62.0" style="-fx-background-color: b89b5f;" text="Valida" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Microsoft JhengHei" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
